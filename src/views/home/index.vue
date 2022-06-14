@@ -21,6 +21,13 @@ const showModal = () => {
   isModalShow.value = true;
 };
 
+const fullName = ref("");
+const email = ref("");
+const phoneNumber = ref("");
+const studentId = ref("");
+const gradeNumber = ref("");
+const gender = ref("");
+
 const clearForm = () => {
   fullName.value = "";
   email.value = "";
@@ -44,13 +51,6 @@ const isValid = computed(
     gradeNumber.value.length > 0 &&
     gender.value.length > 0
 );
-
-const fullName = ref("");
-const email = ref("");
-const phoneNumber = ref("");
-const studentId = ref("");
-const gradeNumber = ref("");
-const gender = ref("");
 
 const addPeserta = async () => {
   try {
