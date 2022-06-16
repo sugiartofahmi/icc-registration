@@ -13,29 +13,33 @@ const filterBy = async () => {
   filtered.value = res.body;
   if (filter.value == 1) {
     studentData.value = filtered.value.filter(
-      (x: any) => x.classYear === "2020"
+      (x: any) => x.classYear === "2019"
     );
   } else if (filter.value == 2) {
     studentData.value = filtered.value.filter(
-      (x: any) => x.classYear === "2021"
+      (x: any) => x.classYear === "2020"
     );
   } else if (filter.value == 3) {
     studentData.value = filtered.value.filter(
-      (x: any) => x.gradeNumber === "A1"
+      (x: any) => x.classYear === "2021"
     );
   } else if (filter.value == 4) {
     studentData.value = filtered.value.filter(
-      (x: any) => x.gradeNumber === "A2"
+      (x: any) => x.gradeNumber === "A1"
     );
   } else if (filter.value == 5) {
     studentData.value = filtered.value.filter(
-      (x: any) => x.gradeNumber === "A3"
+      (x: any) => x.gradeNumber === "A2"
     );
   } else if (filter.value == 6) {
     studentData.value = filtered.value.filter(
-      (x: any) => x.gradeNumber === "A4"
+      (x: any) => x.gradeNumber === "A3"
     );
   } else if (filter.value == 7) {
+    studentData.value = filtered.value.filter(
+      (x: any) => x.gradeNumber === "A4"
+    );
+  } else if (filter.value == 8) {
     studentData.value = filtered.value.filter(
       (x: any) => x.gradeNumber === "A5"
     );
@@ -99,13 +103,14 @@ onMounted(async () => {
                   >
                     <option disabled selected>Silahkan Pilih</option>
                     <option value="100">Tampilkan Semua</option>
-                    <option value="1">Angkatan 2020</option>
-                    <option value="2">Angkatan 2021</option>
-                    <option value="3">Kelas A1</option>
-                    <option value="4">Kelas A2</option>
-                    <option value="5">Kelas A3</option>
-                    <option value="6">Kelas A4</option>
-                    <option value="7">Kelas A5</option>
+                    <option value="1">Angkatan 2019</option>
+                    <option value="2">Angkatan 2020</option>
+                    <option value="3">Angkatan 2021</option>
+                    <option value="4">Kelas A1</option>
+                    <option value="5">Kelas A2</option>
+                    <option value="6">Kelas A3</option>
+                    <option value="7">Kelas A4</option>
+                    <option value="8">Kelas A5</option>
                   </select>
                 </div>
               </div>
