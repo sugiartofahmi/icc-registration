@@ -5,6 +5,14 @@ import Modal from "../../components/Modal/index.vue";
 import Swal from "sweetalert2";
 import { supabase } from "../../supabase";
 
+onMounted(() => {
+  Swal.fire(
+    "Pemberitahuan",
+    "Pendaftaran telah ditutup, terimakasih kepada peserta yang telah mendaftar",
+    "warning"
+  );
+});
+
 const countDown = new Date("June 16, 2022 11:10:00").getTime();
 const hari = ref();
 const jam = ref();
@@ -262,42 +270,9 @@ setInterval(count, 1000);
       <h1 class="title-font sm:text-6xl text-3xl mb-4 font-bold text-black">
         INFORMATICS CODING CAMP
       </h1>
-
-      <div class="flex gap-5">
-        <div>
-          <span class="countdown sm:text-6xl text-3xl">
-            <span>{{ hari }}</span>
-          </span>
-          days
-        </div>
-        <div>
-          <span class="countdown sm:text-6xl text-3xl">
-            <span>{{ jam }}</span>
-          </span>
-          hours
-        </div>
-        <div>
-          <span class="countdown sm:text-6xl text-3xl">
-            <span>{{ menit }}</span>
-          </span>
-          min
-        </div>
-        <div>
-          <span class="countdown sm:text-6xl text-3xl">
-            <span>{{ detik }}</span>
-          </span>
-          sec
-        </div>
-      </div>
-
-      <div class="pt-7 flex justify-center">
-        <button
-          @click="showModal"
-          class="inline-flex text-[#fca311] bg-[#14213d] border-0 py-2 px-6 focus:outline-none hover:bg-[#23386e] rounded text-lg"
-        >
-          Daftar
-        </button>
-      </div>
+      <h1 class="sm:text-xl mb-4 font-bold text-black">
+        SELAMAT MENGIKUTI PELATIHAN
+      </h1>
     </div>
   </div>
 </template>
